@@ -4,8 +4,12 @@ package main
 // adding \n to end of line
 func WordWrap(para string, length int) string {
 	var result string
-	for _, v := range para {
-		result += string(v) + "\n"
+	for i, v := range para {
+		if (i+1)%length == 0 {
+			result += string(v) + "\n"
+		} else {
+			result += string(v)
+		}
 	}
 
 	return result
