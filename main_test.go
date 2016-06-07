@@ -18,3 +18,11 @@ func TestWordWrapWithLengthShorterThanWord(t *testing.T) {
 		t.Errorf("Expected %q but got %q", "hel\nlo", w)
 	}
 }
+
+func TestWordWrapWithMoreThanTwoWord(t *testing.T) {
+	w := WordWrap("helloa june", 4)
+
+	if w != "hell\noa\njune\n" {
+		t.Errorf("Expected %q but got %q", "hell\noa\njune\n", w)
+	}
+}
