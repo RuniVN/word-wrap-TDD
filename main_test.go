@@ -9,3 +9,10 @@ func TestWordWrapWithEmptyString(t *testing.T) {
 	}
 
 }
+
+func TestWordWrapWithShorterString(t *testing.T) {
+	w := WordWrap("a", 5)
+	if w != "a" {
+		t.Errorf("Expected %q but got %q", "a", w)
+	}
+}
