@@ -23,3 +23,10 @@ func TestWordWrapWithWordSperatedEqualToLength(t *testing.T) {
 		t.Errorf("Expected %q but got %q", "abc\nabc\nabc", w)
 	}
 }
+
+func TestWordWrapWithLengthBiggerThanWordLength(t *testing.T) {
+	w := WordWrap("abcd", 2)
+	if w != "ab\ncd" {
+		t.Errorf("Expected %q but got %q", "ab\ncd", w)
+	}
+}
