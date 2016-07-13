@@ -8,3 +8,10 @@ func TestLowerThanOneIsNotPrimeNumber(t *testing.T) {
 		t.Errorf("Expected %q but got %q", false, p)
 	}
 }
+
+func TestFourIsNotPrimeNumber(t *testing.T) {
+	p := IsPrimeNumber(4)
+	if !p {
+		t.Errorf("Expected %q but got %q", false, p)
+	}
+}
